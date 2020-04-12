@@ -4,17 +4,30 @@
   "description": "Server side rendering project",
   "main": "index.js",
   "scripts": {
-    "start" : "npm-run-all prod:*",
-    "prod:build" : "",
-    "prod:build-server" : "webpack",
-    "prod:build-client" : "",
+    "start": "npm-run-all prod:*",
+    "prod:build": "",
+    "prod:build-server": "webpack",
+    "prod:build-client": "",
     "dev": "npm-run-all --parallel dev:*",
     "dev:run-server": "nodemon --watch build --exec node build/bundle.js",
     "dev:build-server": "webpack --config webpack.server.js --watch",
-    "dev:build-client": "webpack --config webpack.client.js --watch"
+    "dev:build-client": "webpack --config webpack.client.js --watch",
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/index.js"
+    ],
+    "coverageReporters": [
+      "text"
+    ]
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "babel-cli": "^6.26.0",
@@ -45,5 +58,13 @@
     "webpack-dev-server": "^2.11.5",
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.5",
+    "babel-jest": "^25.3.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "jest": "^25.3.0"
   }
 }
