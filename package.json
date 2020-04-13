@@ -4,7 +4,7 @@
   "description": "Server side rendering project",
   "main": "index.js",
   "scripts": {
-    "start": "npm run dist/bundle.server.js",
+    "start": "node dist/bundle.server.js",
     "build": "npm-run-all prod:*",
     "prod:build-server": "webpack --config webpack.server.js",
     "prod:build-client": "webpack --config webpack.client.js",
