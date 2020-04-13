@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-function renderRoutes({routes}) {
+function RenderRoutes({routes}) {
   return (
       <Switch>
         {routes.map((route, index) => {
@@ -14,4 +14,4 @@ function renderRoutes({routes}) {
   );
 }
 
-export default renderRoutes;
+export default RenderRoutes;
