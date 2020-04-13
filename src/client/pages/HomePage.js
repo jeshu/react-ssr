@@ -12,6 +12,7 @@ function HomePage() {
     <div className="center-align" style={{marginTop:'300px'}}>
       {head()}
       <h3>Welcome</h3>
+      <h4>CMB-React-SSR</h4>
       <p>Check out some awesome stuff for React SSR</p>
       </div>
   );
