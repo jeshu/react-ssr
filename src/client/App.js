@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import { fetchCurrentUsers } from "./actions";
-import RenderRoutes from "../helpers/renderRoutes";
+import RenderRoutes from "../helpers/RenderRoutes";
 
 const App = ({ routes }) => {
   return (
